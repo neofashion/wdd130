@@ -1,10 +1,15 @@
-header {
-    background-color: steelblue;
-    height: 50px;
-}
 
 h1{
     color: black;
+}
+nav  {
+    background-color: steelblue;
+    height: 50px;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
 }
 nav a {
     color: white;
