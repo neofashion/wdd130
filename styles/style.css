@@ -1,3 +1,14 @@
+header {
+    background-color: steelblue;
+    height: 50px;
+}
+
+nav a {
+    color: white;
+    display: block;
+    margin-left: 10px;
+    margin-top: 5px;
+}
 main {
     max-width: 840px;
 }
