@@ -3,6 +3,9 @@ header {
     height: 50px;
 }
 
+h1{
+    color: black;
+}
 nav a {
     color: white;
     display: block;
