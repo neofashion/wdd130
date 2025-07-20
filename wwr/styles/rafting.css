@@ -1,0 +1,116 @@
+/* Image container with overlay and text */
+.image-container {
+  position: relative; /* important to position children absolutely */
+  display: inline-block; /* shrink to fit */
+}
+
+.image-container .background {
+  display: block;
+  width: 100%; /* or fixed width like 500px */
+}
+
+.image-container .overlay {
+  position: absolute;
+  top: 20px;   /* adjust position */
+  left: 20px;
+  width: 100px; /* control overlay size */
+  opacity: 0.8; /* optional transparency */
+}
+
+.image-container .text {
+  position: absolute;
+  bottom: 20px; /* adjust to place text */
+  left: 20px;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  background: rgba(0,0,0,0.5); /* semi-transparent background for readability */
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+/* Make social media icons smaller in the footer */
+.socialmedia img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin: 0 4px;
+}
+/* Rafting Site CSS */
+:root {
+  --primary-color: #161616;
+  --secondary-color: #CCFF66;
+  --accent1-color: #630fe9;
+  --accent2-color: #2EC4B6;
+  --heading-font: 'Montserrat', sans-serif;
+  --body-font: 'Open Sans', sans-serif;
+}
+
+/* Reset box-model */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--body-font);
+  color: var(--accent1-color);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+header, main, footer {
+  width: 840px;
+  margin: 5 auto;
+}
+
+h1, h2 {
+  font-family: var(--heading-font);
+  color: var(--primary-color);
+}
+
+nav, p, section, article {
+  margin: 16px;
+  padding: 8px;
+}
+
+.socialmedia a {
+  text-decoration: none;
+}
+
+.hero {
+  position: relative;
+}
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.hero h1 {
+  position: absolute;
+  top: 20px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  opacity: 0.7;
+  background-color: var(--accent1-color);
+  color: #fff;
+}
+.hero article {
+  position: absolute;
+  bottom: 30px;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.8);
+  padding: 16px;
+  max-width: 600px;
+  border-radius: 8px;
+}
+.hero article img {
+  float: right;
+  width: 125px;
+  margin-left: 16px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
