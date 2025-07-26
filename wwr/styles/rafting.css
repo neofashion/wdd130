@@ -61,6 +61,10 @@ nav ul li a {
 h1 {
     font-size: 40px;
 }
+
+h2 {
+  text-align: center;
+}
 .hero-img {
     width: 100%;
     justify-content: center;
