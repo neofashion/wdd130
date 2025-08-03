@@ -1,29 +1,92 @@
-:root {
-    --primary-color: grey;
-    /* tea rose (red) */
-    --secondary-color: #885a5a;
-    /* rose taupe */
-    --accent1--color: #f7c1bb;
-    /* charcoal */
-    --accent2-color: #353a47;
-    /*dogwood rose */
-    --heading-font: "Merriweather Sans", sans-serif;
-    --body-font: "Lato", sans-serif;
+figure {
+    display: block;
+    margin: 20px;
+    text-align: center;
+    width: 300px;
+    height: auto;
+    margin-left: 700px;
 }
- 
-header {
-    margin: 1rem auto;
-    display: grid;
-    grid-template-columns: 120px 1fr 1fr;
+
+figure img {
+    width: 400px;
+    height: auto;
+}
+
+figcaption {
+    background-color: #222;
+    color: #f5f3f3;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+footer {
+    margin: 0;
+    padding: 1.5rem 2vw 1rem 2vw;
+    background: #222;
+    color: #fff;
+    display: flex;
     align-items: center;
-    border-bottom: 1px solid #ccc;
-    background-color: var(--primary-color);
+    justify-content: space-between;
+    flex-wrap: wrap;
+    font-size: 1rem;
+}
+footer p {
+    margin: 0;
+    font-size: 1rem;
+    letter-spacing: 0.02em;
+}
+.social {
+    display: flex;
+    gap: 1.2rem;
+    align-items: center;
+    justify-content: flex-end;
+}
+.social img {
+    width: 32px;
+    height: 32px;
+    object-fit: contain;
+    filter: grayscale(0.2) brightness(0.95);
+    transition: filter 0.18s, transform 0.18s;
+    cursor: pointer;
+}
+.social img:hover {
+    filter: grayscale(0) brightness(1.2) drop-shadow(0 2px 8px #fff2);
+    transform: scale(1.12) rotate(-6deg);
+}
+header {
+    margin: 0 auto 2rem auto;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    align-items: center;
+    border-bottom: 4px solid var(--accent2-color);
+    background: linear-gradient(90deg, var(--primary-color) 60%, var(--secondary-color) 100%);
     color: var(--accent2-color);
+    grid-template-areas: "logo nav";
+    box-shadow: 0 4px 16px rgba(53,58,71,0.08);
+    min-height: 90px;
+    padding: 0 2vw;
 }
  
+.logo {
+    grid-area: logo;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
 .logo img {
-    margin: 0 0.25rem 0 1rem;
-    width: 64px;    height: auto;
+    margin: 0 1rem 0 0;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    border: 2px solid var(--accent2-color);
+    box-shadow: 0 2px 8px rgba(53,58,71,0.12);
+    background: #fff;
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+.logo img:hover {
+    transform: scale(1.07) rotate(-3deg);
+    box-shadow: 0 4px 16px rgba(53,58,71,0.18);
 }
  
 h1 {
@@ -31,12 +94,42 @@ h1 {
     font-family: Acme, Arial, sans-serif;
 }
  
+/* Navigation styles for header */
 .navigation {
+    grid-area: nav;
     display: flex;
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
-    font-family: Arial, sans-serif;
+    margin: 0;
+    font-family: var(--heading-font);
+    justify-content: flex-end;
+    gap: 0.5rem;
+    background: none;
+    align-items: center;
+}
+.navigation li {
+    flex: 0 0 auto;
+}
+.navigation a {
+    display: block;
+    color: var(--accent2-color);
+    background: rgba(255,255,255,0.7);
+    border-radius: 8px;
+    padding: 0.75em 1.5em;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    box-shadow: 0 1px 4px rgba(53,58,71,0.06);
+}
+.navigation a:hover, .navigation a:focus {
+    color: #e6dede;
+    background: var(--accent2-color);
+    box-shadow: 0 2px 8px rgba(53,58,71,0.18);
+    text-decoration: none;
+    outline: none;
 }
  
 .navigation li {
@@ -95,14 +188,16 @@ h1 {
  
 nav {
     display: flex;
-    justify-content: space-around;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
     padding: 0;
     font-family: var(--heading-font);
 }
  
 nav a {
     display: block;
-    color: white;
+    color: rgb(238, 32, 32);
     padding: 20px;
     text-decoration: none;
     font-size: 1.2rem;
@@ -172,11 +267,13 @@ article {
 }
 .history-grid {
     display: grid;
-    flex-direction: row;
-    justify-content: center;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
+    justify-items: center;
+    padding: 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
 }
  
 .history h2, .adventures h2 {
@@ -186,26 +283,118 @@ article {
 }
  
 .history-text {
-    width: 50%;
-    font-size: 30px;
+    font-size: 1.5rem;
     grid-column: 1;
     grid-row: 1;
-    margin-left: 200px;
-    text-align: center;
+    text-align: left;
+    align-self: center;
+    padding: 0 2rem;
 }
 .history-image {
-    width: 500px;
-    height: auto;
     grid-column: 2;
     grid-row: 1;
-    margin-right: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem;
 }
+.history-image img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(53,58,71,0.10);
+}
+@media (max-width: 900px) {
+  .history-grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding: 1rem 0;
+  }
+  .history-text, .history-image {
+    grid-column: 1;
+    padding: 0 1rem;
+    text-align: center;
+  }
+  .history-image img {
+    max-width: 90vw;
+  }
+}
+
 
 .adventures {
     background-color: grey;
     color: #353a47;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+    padding: 2.5rem 0 2rem 0;
+}
+.adventures h2 {
+    margin-bottom: 2rem;
+}
+.adventures {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.adventures-figures {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2vw;
+}
+.adventures figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(53,58,71,0.10);
+    overflow: hidden;
+    margin: 0;
+    transition: transform 0.18s, box-shadow 0.18s;
+}
+.adventures figure:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 6px 24px rgba(53,58,71,0.18);
+}
+.adventures img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 1px solid #eee;
+}
+.adventures figcaption {
+    background: var(--accent2-color);
+    color: #f00808c0;
+    font: italic 1rem var(--body-font, sans-serif);
+    padding: 0.75em 0.5em;
+    text-align: center;
+    width: 100%;
+}
+@media (max-width: 1200px) {
+  .adventures-figures {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (max-width: 800px) {
+  .adventures-figures {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .adventures img {
+    height: 140px;
+  }
+}
+@media (max-width: 500px) {
+  .adventures-figures {
+    grid-template-columns: 1fr;
+  }
+  .adventures img {
+    height: 110px;
+  }
 }
 
 .adventures h2 {
