@@ -15,17 +15,25 @@
      <link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300..700;1,300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=PT+Serif:ital@0;1&display=swap"
           rel="stylesheet">
      <link rel="stylesheet" href="styles/rafting.css">
+     <style>
+       /* Remove circle and border for logo on about page only */
+       .logo {
+         border-radius: 0 !important;
+         border: none !important;
+       }
+     </style>
 </head>
  
 <body>
      <header>
           <a href="index.html">
-               <img src="images/logo.png" alt="Rafting Company Logo"></a>
-          <nav>
-               <a href="index.html">Home</a>
-               <a href="about.html">About Us</a>
-               <a href="trips.html">Our Trips</a>
-               <a href="contact.html">Contact Us</a>
+            <img src="images/logo.png" alt="Rafting Company Logo" class="logo">
+          </a>
+          <nav class="main-nav">
+            <a href="index.html">Home</a>
+            <a href="about.html" class="active">About Us</a>
+            <a href="trips.html">Our Trips</a>
+            <a href="contact.html">Contact Us</a>
           </nav>
      </header>
      <main>
@@ -76,13 +84,15 @@
           </section> 
      </main>
  
-<footer>
-  <p>&copy; 2025 |  White Water Rafting Company | OTAVIE YELEBE</p>
-  <div class="social">
-    <img src="images/facebook.svg" alt="Facebook">
-    <img src="images/twitter.svg" alt="Twitter">
-    <img src="images/instagram.svg" alt="Instagram">
-  </div>
-</footer>
+    <footer>
+      <div class="container footer-flex">
+        <p>&copy; 2025 | White Water Rafting Company | OTAVIE YELEBE</p>
+        <div class="social">
+          <a href="#" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook"></a>
+          <a href="#" aria-label="Twitter"><img src="images/twitter.svg" alt="Twitter"></a>
+          <a href="#" aria-label="Instagram"><img src="images/instagram.svg" alt="Instagram"></a>
+        </div>
+      </div>
+    </footer>
 </body>
 </html>
