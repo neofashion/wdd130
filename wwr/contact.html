@@ -49,17 +49,23 @@
                 </div>
                 <fieldset class="form-group">
                   <legend>Purpose of Message:</legend>
-                  <label><input type="radio" name="purpose" value="General Inquiry" required> General Inquiry</label>
-                  <label><input type="radio" name="purpose" value="Reservation Question"> Reservation Question</label>
-                  <label><input type="radio" name="purpose" value="Website Suggestion"> Website Suggestion</label>
+                  <label for="purpose-general">
+                    <input type="radio" id="purpose-general" name="purpose" value="General Inquiry" required> General Inquiry
+                  </label>
+                  <label for="purpose-reservation">
+                    <input type="radio" id="purpose-reservation" name="purpose" value="Reservation Question"> Reservation Question
+                  </label>
+                  <label for="purpose-suggestion">
+                    <input type="radio" id="purpose-suggestion" name="purpose" value="Website Suggestion"> Website Suggestion
+                  </label>
                 </fieldset>
                 <div class="form-group">
                   <label for="message">Message:</label>
                   <textarea id="message" name="message" rows="5" required></textarea>
                 </div>
                 <div class="form-group newsletter-group">
-                  <label class="newsletter">
-                    <input type="checkbox" name="subscribe" value="yes">
+                  <label class="newsletter" for="subscribe-newsletter">
+                    <input type="checkbox" id="subscribe-newsletter" name="subscribe" value="yes">
                     Please subscribe me to the monthly newsletter
                   </label>
                 </div>
