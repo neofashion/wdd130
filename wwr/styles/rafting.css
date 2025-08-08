@@ -378,7 +378,7 @@ article {
 }
 .adventures {
     display: flex;
-    flex-direction: column;
+    flex-direction: horizontal;
     align-items: center;
 }
 .adventures-figures {
