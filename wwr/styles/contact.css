@@ -20,11 +20,7 @@ body {
   padding: 0 2vw;
 }
 
-  text-align: center;
-  color: #353a47;
-  font-size: 1.08rem;
-  font-weight: 600;
-}
+
 .employee-profiles figcaption span {
   display: block;
   color: #885a5a;
