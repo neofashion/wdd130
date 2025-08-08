@@ -28,11 +28,7 @@ body {
   font-weight: 400;
   margin-top: 0.2em;
 }
-.map {
-  display: flex;
-  justify-content: center;
-  margin: 2.5rem 0 2rem 0;
-}
+
 @media (max-width: 700px) {
   .contact-form {
     padding: 1.2rem 0.7rem 1rem 0.7rem;
@@ -68,13 +64,7 @@ body {
   color: #353a47;
   text-decoration: underline;
 }
-.map iframe {
-  width: 100%;
-  height: 220px;
-  border: 0;
-  border-radius: 10px;
-  box-shadow: 0 2px 12px rgba(53,58,71,0.08);
-}
+
 .contact-form {
   max-width: 500px;
   margin: 2rem auto 2.5rem auto;
@@ -193,11 +183,7 @@ body {
   font-weight: 400;
   margin-top: 0.2em;
 }
-.map {
-  display: flex;
-  justify-content: center;
-  margin: 2.5rem 0 2rem 0;
-}
+
 @media (max-width: 900px) {
   .contact-flex {
     flex-direction: column;
@@ -346,11 +332,7 @@ body {
   margin-top: 0.2em;
 }
 
-.map {
-  display: flex;
-  justify-content: center;
-  margin: 2.5rem 0 2rem 0;
-}
+
 
 @media (max-width: 700px) {
   .contact-form {
